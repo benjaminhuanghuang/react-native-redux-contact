@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Button, KeyboardAvoidingView, StyleSheet, TextInput, View } from 'react-native'
 
@@ -87,6 +86,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
+    
     input: {
         borderWidth: 1,
         borderColor: 'black',
