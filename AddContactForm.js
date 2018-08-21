@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, KeyboardAvoidingView, StyleSheet, TextInput, View } from 'react-native'
+import { Button, KeyboardAvoidingView, StyleSheet, TextInput, x } from 'react-native'
+import { Constants } from 'expo'
 
 export default class AddContactForm extends React.Component {
     state = {
@@ -8,6 +9,7 @@ export default class AddContactForm extends React.Component {
         isFormValid: false,
     }
 
+    // setState -> componentDidUpdate -> validateForm -> setState
     componentDidUpdate(prevProps, prevState) {
         if (this.state.name !== prevState.name || this.state.phone !== prevState.phone) {
             this.validateForm()
@@ -25,13 +27,14 @@ export default class AddContactForm extends React.Component {
     handleNameChange = name => {
       this.setState({name})
     }
-    */
+    
 
     handlePhoneChange = phone => {
         if (+phone >= 0 && phone.length <= 10) {
             this.setState({ phone })
         }
     }
+    */
 
     validateForm = () => {
         console.log(this.state)
@@ -44,17 +47,21 @@ export default class AddContactForm extends React.Component {
             names[1]
         ) {
             this.setState({ isFormValid: true })
-        } else {
+        }
+        else {
             this.setState({ isFormValid: false })
         }
     }
 
-    validateForm2 = () => {
+    /*
+    // Used inline: disabled={this.validateForm()}
+    validateForm_old = () => {
         if (+this.state.phone >= 0 && this.state.phone.length === 10 && this.state.name.length >= 3) {
             return true
         }
         return false
     }
+    */
 
     handleSubmit = () => {
         this.props.onSubmit(this.state)
@@ -85,8 +92,9 @@ export default class AddContactForm extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        paddingTop: Constants.statusBarHeight,
     },
-    
+
     input: {
         borderWidth: 1,
         borderColor: 'black',
