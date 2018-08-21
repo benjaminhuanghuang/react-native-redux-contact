@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, KeyboardAvoidingView, StyleSheet, TextInput, x } from 'react-native'
+import { Button, KeyboardAvoidingView, StyleSheet, TextInput } from 'react-native'
 import { Constants } from 'expo'
 
 export default class AddContactForm extends React.Component {
@@ -69,6 +69,7 @@ export default class AddContactForm extends React.Component {
 
     render() {
         return (
+            // Avoid keyboard overlab on the inputs
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
                 <TextInput
                     style={styles.input}
@@ -93,6 +94,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: Constants.statusBarHeight,
+        justifyContent: 'center0',
     },
 
     input: {
