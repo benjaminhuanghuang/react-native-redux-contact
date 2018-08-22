@@ -4,7 +4,7 @@ import React from 'react'
 // import { PersistGate } from 'redux-persist/integration/react'
 
 //
-import AppSwitchNavigator from './AppSwitchNavigator';
+import AppNavigator from './AppNavigator';
 import { fetchUsers } from './api'
 import contacts from './contacts'
 import { store, persistor } from './redux/store'
@@ -23,9 +23,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <AppSwitchNavigator
-        screenProps={{ contacts: this.state.contacts, addContact: this.addContact }}
-      />
+      <AppNavigator screenProps={{ contacts: this.state.contacts, addContact: this.addContact }} />
     )
   }
 }
