@@ -26,7 +26,7 @@ const SectionListContacts = props => {
     <SectionList
       keyExtractor={item => item.phone}
       sections={sections}
-      renderItem={({ item }) => <Row {...item} onSelectContact={props.onSelectContact} /> }
+      renderItem={({ item }) => <Row {...item} onSelectContact={(contract)=>props.onSelectContact(contract)} /> }
       renderSectionHeader={renderSectionHeader}
     />
   );

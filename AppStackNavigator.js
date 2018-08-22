@@ -9,11 +9,13 @@ import {
 //
 import AddContactScreen from "./screens/AddContactScreen";
 import ContactListScreen from "./screens/ContactListScreen";
+import ContactDetailsScreen from "./screens/ContactDetailsScreen";
 
 
 export const AppStackNavigator = createStackNavigator({
     AddContact: AddContactScreen,
-    ContactList: ContactListScreen
+    ContactList: ContactListScreen,
+    ContactDetails: ContactDetailsScreen
 }, {
         initialRouteName: 'ContactList'
     });

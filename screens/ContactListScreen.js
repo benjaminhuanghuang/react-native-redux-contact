@@ -23,15 +23,12 @@ export default class ContactListScreen extends React.Component {
     showContacts: true,
   };
 
-
-
-
   toggleContacts = () => {
     this.setState(prevState => ({ showContacts: !prevState.showContacts }));
   };
 
   handleSelectContact = contact => {
-    this.props.navigation.push('ContactDetails', contact);
+     this.props.navigation.push('ContactDetails', contact);
   };
 
   render() {
