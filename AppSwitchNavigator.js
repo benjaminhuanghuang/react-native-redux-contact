@@ -7,13 +7,13 @@ import {
 } from "react-navigation";
 
 //
-import AddContactScreen from "./screens/AddContactScreen";
-import ContactListScreen from "./screens/ContactListScreen";
+import MainTabNavigator from "./MainTabNavigator";
+import LonginScreen from "./screens/LoginScreen";
 
-
-export const AppSwitchNavigator = createSwitchNavigator({
-    AddContact: AddContactScreen,
-    ContactList: ContactListScreen
+const AppSwitchNavigator = createSwitchNavigator({
+    Main: MainTabNavigator,
+    Login: LonginScreen
 }, {
-        initialRouteName: 'ContactList'
+        initialRouteName: 'Login'
     });
+export default AppSwitchNavigator;

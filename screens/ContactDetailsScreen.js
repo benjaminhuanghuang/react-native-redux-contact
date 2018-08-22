@@ -2,7 +2,7 @@ import React from 'react'
 import {Button, Text, View} from 'react-native'
 
 export default class ContactDetailsScreen extends React.Component {
-  
+
   static navigationOptions = ({navigation}) => ({
     headerTitle: navigation.getParam('name'),
   })
@@ -30,6 +30,9 @@ export default class ContactDetailsScreen extends React.Component {
     // this.props.navigation.navigate('ContactDetails', {
     //   ...randomContact,
     // });
+
+    
+    // Push is only available inside of stack nav
     this.props.navigation.push('ContactDetails', {
       ...randomContact,
     })

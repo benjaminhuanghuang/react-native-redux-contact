@@ -1,9 +1,7 @@
 import React from "react";
 import { StatusBar, View } from "react-native";
 import {
-    createStackNavigator,
-    createSwitchNavigator,
-    createBottomTabNavigator
+    createStackNavigator
 } from "react-navigation";
 
 //
@@ -12,10 +10,15 @@ import ContactListScreen from "./screens/ContactListScreen";
 import ContactDetailsScreen from "./screens/ContactDetailsScreen";
 
 
-export const AppStackNavigator = createStackNavigator({
+const ContactsStackNavigator = createStackNavigator({
     AddContact: AddContactScreen,
     ContactList: ContactListScreen,
     ContactDetails: ContactDetailsScreen
 }, {
-        initialRouteName: 'ContactList'
+        initialRouteName: 'ContactList',
+        navigationOptions: {
+            headerTintColor: "#a41034"
+        }
     });
+
+export default ContactsStackNavigator; 
