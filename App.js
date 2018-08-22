@@ -5,6 +5,7 @@ import React from 'react'
 
 //
 import { AppSwitchNavigator } from './AppSwitchNavigator';
+import { AppStackNavigator } from './AppStackNavigator';
 import AddContactScreen from './screens/AddContactScreen'
 import SettingsScreen from './screens/SettingsScreen'
 import ContactListScreen from './screens/ContactListScreen'
@@ -28,7 +29,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <AppSwitchNavigator
+      <AppStackNavigator
         screenProps={{ contacts: this.state.contacts, addContact: this.addContact }}
       />
     )

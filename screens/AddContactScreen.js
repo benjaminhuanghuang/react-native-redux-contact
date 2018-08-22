@@ -1,8 +1,8 @@
 import React from 'react'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 //
 import AddContactForm from '../components/AddContactForm'
-import { addContact } from '../redux/actions'
+// import { addContact } from '../redux/actions'
 
 class AddContactScreen extends React.Component {
   static navigationOptions = {
@@ -19,4 +19,5 @@ class AddContactScreen extends React.Component {
   }
 }
 
-export default connect(null, { addContact: addContact })(AddContactScreen)
+export default AddContactScreen;
+// export default connect(null, { addContact: addContact })(AddContactScreen)
