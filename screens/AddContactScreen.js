@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 //
-import AddContactForm from '../AddContactForm'
+import AddContactForm from '../components/AddContactForm'
 import { addContact } from '../redux/actions'
 
 class AddContactScreen extends React.Component {

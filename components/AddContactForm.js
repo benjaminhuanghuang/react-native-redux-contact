@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: Constants.statusBarHeight,
-        justifyContent: 'center0',
+        justifyContent: 'center',
     },
 
     input: {
