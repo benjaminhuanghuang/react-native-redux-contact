@@ -24,7 +24,6 @@ const ContactsStackNavigator = createStackNavigator({
         }
     });
 
-
 ContactsStackNavigator.navigationOptions = {
     tabBarIcon: ({ focused, tintColor }) => (
         <Ionicons name={`ios-contacts${focused ? '' : '-outline'}`} size={25} color={tintColor} />
@@ -32,7 +31,7 @@ ContactsStackNavigator.navigationOptions = {
 };
 
 
-// Navigator for the contacts navigator add settings
+// Main navigator for the contacts navigator add settings
 import SettingsScreen from "./screens/SettingsScreen";
 
 const MainTabNavigator = createBottomTabNavigator({
@@ -45,7 +44,7 @@ const MainTabNavigator = createBottomTabNavigator({
     });
 
 
-// Navigator fot login sreen and the main navigator
+// Navigator for login sreen and the main navigator
 import LonginScreen from "./screens/LoginScreen";
 
 const AppNavigator = createSwitchNavigator({

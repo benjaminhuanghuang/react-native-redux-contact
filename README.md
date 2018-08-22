@@ -7,7 +7,7 @@
 ## Functions
 - UI elements
 
-- Navigation
+- Navigation and Composing navigators
 
 - Redux
 
