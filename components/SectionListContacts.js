@@ -7,11 +7,12 @@ import Row from './Row';
 const renderSectionHeader = ({ section }) => <Text>{section.title}</Text>;
 
 const SectionListContacts = props => {
+  // array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
   const contactsByLetter = props.contacts.reduce((obj, contact) => {
     const firstLetter = contact.name[0].toUpperCase();
     return {
-      ...obj,
-      [firstLetter]: [...(obj[firstLetter] || []), contact],
+      ...obj,    // return the same object in a new immutable object
+      [firstLetter]: [...(obj[firstLetter] || []), contact],    // overwrite the object[firstLetter]
     };
   }, {});
 
